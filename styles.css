@@ -1,0 +1,154 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #3b4664;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: 'Poppins', sans-serif;
+    padding: 10px; 
+}
+
+.calc {
+    width: 100%;
+    max-width: 400px;
+    background-color: #252d44;
+    border-radius: 10px;
+    padding: 20px;
+    display: grid;
+    grid-template-rows: auto auto 1fr;
+    gap: 20px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.calc-title {
+    font-size: 1.5rem;
+    color: white;
+}
+
+.theme {
+    display: flex;
+    align-items: center;
+}
+
+.theme-label {
+    color: white;
+    margin-right: 10px;
+}
+
+.theme-buttons {
+    display: flex;
+    gap: 5px;
+}
+
+.theme-buttons button {
+    width: 20px;
+    height: 20px;
+    background-color: #333a45;
+    border: none;
+    border-radius: 50%;
+    color: white;
+    cursor: pointer;
+    font-size: 0.75rem;
+}
+
+.display {
+    background-color: #181F32;
+    width: 100%;
+    text-align: right;
+    padding: 20px;
+    font-size: 2rem;
+    border-radius: 5px;
+    color: white;
+    word-wrap: break-word; 
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+.buttons button {
+    padding: 15px;
+    background-color: #eae3db;
+    color: #42495B;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    box-shadow: 0px -4px 0px 0px rgba(0, 0, 0, 0.2) inset; 
+    transition: background-color 0.3s;
+}
+
+.buttons .delete {
+    background-color: #647198;
+    color: white;
+}
+
+.buttons .reset {
+    background-color: #647198;
+    color: white;
+    grid-column: span 2;
+}
+
+.buttons .equals {
+    background-color: #d03f2f;
+    color: white;
+    grid-column: span 2;
+}
+
+.buttons button:hover {
+    background-color: #d1cbc5;
+    box-shadow: 0 6px 0 rgba(0, 0, 0, 0.3);
+}
+
+@media (max-width: 400px) {
+    .calc {
+        padding: 10px;
+    }
+
+    .display {
+        padding: 15px;
+        font-size: 1.5rem;
+    }
+
+    .buttons {
+        gap: 8px;
+    }
+
+    .buttons button {
+        padding: 12px;
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 320px) {
+    .calc {
+        padding: 5px;
+    }
+
+    .display {
+        padding: 10px;
+        font-size: 1.2rem;
+    }
+
+    .buttons {
+        gap: 5px;
+    }
+
+    .buttons button {
+        padding: 10px;
+        font-size: 0.9rem;
+    }
+}
